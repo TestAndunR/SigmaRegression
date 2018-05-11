@@ -6,8 +6,6 @@ exports.handler = function (event, context, callback) {
 	let key = event.key;
 	// let subject = event.subject;
 	// let body = event.body;
-	console.log(event);
-
 	kinesis.putRecord({
 		Data: para,
 		PartitionKey: key,
@@ -22,6 +20,11 @@ exports.handler = function (event, context, callback) {
 			// error handling goes here
 		});
 
+
+
+	console.log(event);
+
+	
 
 	callback(null, 'Successfully executed');
 }
