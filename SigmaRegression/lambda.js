@@ -3,7 +3,7 @@ const ses = new AWS.SES();
 exports.handler = function (event, context, callback) {
 	let subject = event.subject;
 	let body = event.body;
-	
+
 	ses.sendEmail({
 		Destination: {
 			ToAddresses: ['andun@adroitlogic.com'],
@@ -11,11 +11,6 @@ exports.handler = function (event, context, callback) {
 			BccAddresses: []
 		},
 		Message: {
-			Body: {
-				Text: {
-					Data: body
-				}
-			},
 			Subject: {
 				Data: subject
 			}
