@@ -3,7 +3,7 @@ const ses = new AWS.SES();
 exports.handler = function (event, context, callback) {
 	// let subject = event.subject;
 	// let body = event.body;
-
+	console.log(event);
 	// ses.sendEmail({
 	// 	Destination: {
 	// 		ToAddresses: ['andun@adroitlogic.com'],
