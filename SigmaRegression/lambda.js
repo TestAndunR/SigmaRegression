@@ -17,8 +17,8 @@ exports.handler = function (event, context, callback) {
 	// });
 	ddb.query({
 		TableName: 'TestDynamo',
-		ExpressionAttributeValues: {},
-		KeyConditionExpression: 'SongTitle = :t',
+		ExpressionAttributeValues: {':s':"song1"},
+		KeyConditionExpression: 'Song = :s',
 		FilterExpression: '',
 	}, function (err, data) {
 		if (err) {
