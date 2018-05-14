@@ -5,14 +5,14 @@ exports.handler = function (event, context, callback) {
 	let song = event.song;
 	let source = event.source;
 	let artist = event.artist;
-
+	console.log(Id,song,source,artist);
 	ddb.put({
 		TableName: 'TestDynamo',
 		Item: {
 			'Song': song,
 			'Source': source,
 			'Artist': artist,
-			'Id': Id
+			'Id': 'id2'
 		}
 	}, function (err, data) {
 		if (err) {
